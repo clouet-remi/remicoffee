@@ -16,7 +16,7 @@
   "scripts": {
     "start": "node index.js",
     "dev": "node --watch index.js",
-    "db:init": "psql \"postgresql://$DB_USER:$DB_PASSWORD@$DB_HOST:$DB_PORT/$DB_NAME\" -f ./data/create-db.sql"
+    "db:init": "psql -U remicoffee -d remicoffee -f ./data/create-db.sql"
   },
   "repository": {
     "type": "git",
