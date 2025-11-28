@@ -1,0 +1,33 @@
+{
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "install": "^0.13.0",
+    "pg": "^8.16.3"
+  },
+  "name": "sb04-ocoffee-clouet-remi",
+  "version": "1.0.0",
+  "description": "## Le projet de oCoffee pour les frères Pepper",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js",
+    "db:init": "psql \"postgresql://$DB_USER:$DB_PASSWORD@$DB_HOST:$DB_PORT/$DB_NAME\" -f ./data/create-db.sql"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/O-clock-Figueres/SB04-oCoffee-clouet-remi.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/O-clock-Figueres/SB04-oCoffee-clouet-remi/issues"
+  },
+  "homepage": "https://github.com/O-clock-Figueres/SB04-oCoffee-clouet-remi#readme"
+}

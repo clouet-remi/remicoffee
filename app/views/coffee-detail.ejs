@@ -1,0 +1,43 @@
+<%- include("partials/head.ejs") %>
+
+    <!-- Style -->
+    <link rel="stylesheet" href="../css/detail.css">
+    </head>
+
+    <%- include("partials/nav.ejs") %>
+
+        <main>
+            <section id="coffee-detail">
+
+                <h1>
+                    <%= pageTitle %>
+                        </h2>
+
+                        <article>
+                            <img src="../images/coffees/<%= coffee.reference %>.png" alt="">
+                            <h3>
+                                <%= coffee.coffee_name %>
+                            </h3>
+                            <p>
+                                Origine : <%= coffee.country_name %>
+                            </p>
+                            <p>
+                                <%= coffee.price %> €/kg
+                            </p>
+                            <p> Catégorie : 
+                                <% for(const characteristic of characteristics) { %>
+                                <%= characteristic.name %>
+                                <% } %>
+                            </p>
+                            <p class="coffee-description">
+                                <%= coffee.description %>
+                            </p>
+                            <p>
+                                <%= coffee.disponibility===true ? "Disponible" : "Plus de stock" %>
+                            </p>
+                        </article>
+            </section>
+
+        </main>
+
+        <%- include("partials/foot.ejs") %>

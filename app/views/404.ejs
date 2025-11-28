@@ -1,0 +1,15 @@
+<%- include("partials/head.ejs") %>
+  <!-- Style -->
+  <link rel="stylesheet" href="../css/404.css">
+  </head>
+  
+<%- include("partials/nav.ejs") %>
+
+<h1>Erreur 404</h1>
+<% if (locals.message) { %>
+ <p class="para__404"><%= message %></p>
+<% }  else { %>
+<p class="para__404">Désolé mais la page que vous cherchez n'existe pas</p>
+<% } %>
+
+<%- include("partials/foot.ejs") %>

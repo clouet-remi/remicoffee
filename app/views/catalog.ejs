@@ -1,0 +1,40 @@
+<%- include("partials/head.ejs") %>
+  <!-- Style -->
+  <link rel="stylesheet" href="../css/catalog.css">
+  </head>
+  
+<%- include("partials/nav.ejs") %>
+
+    <main>
+      <section id="catalog">
+        <h1><%= pageTitle %></h1>
+
+        <div class="articles only-display-3-articles" id="articles-list">
+          
+          <% for( const coffee of coffees ) { %>
+          
+            <article>
+              <img
+              src="../images/coffees/<%= coffee.reference %>.png"
+              alt="<%= coffee.coffee_name %>"
+              />
+              <div>
+                <h2><%= coffee.coffee_name %></h2>
+                <p>Origine <%= coffee.country_name %></p>
+                <p><%= coffee.price %> €/kg</p>
+                <p> Catégorie :<%= characteristics[coffee.id] %></p>
+
+                <a class="button-outline" href="/coffee/<%= coffee.coffee_name.trim().split(" ").join("-").toLowerCase() %>">Voir le détail</a>
+              </div>
+            </article>
+            
+            <% } %>
+        </div>
+
+        <button class="button" id="see-all-products-button">
+          Voir tous les produits
+        </button>
+      </section>
+    </main>
+
+<%- include("partials/foot.ejs") %>
